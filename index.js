@@ -3,21 +3,44 @@ module.exports = () => {};
   const path = require('path');
   
   fs.readdir('./', (err, data) => {
-      data.forEach(format => {
-      if(path.extname(format) === ".md"){
-         let mdFormat= format;
-         fs.readFile(`./${mdFormat}`, 'utf8', (err,fileMd) =>
+      data.forEach(extend => {
+      if(path.extname(extend) === ".md"){
+         let mdExtend= extend;
+         fs.readFile(`./${mdExtend}`, 'utf8', (err,fileMd) =>
               {
                   if(fileMd)
-                      console.log(fileMd)
+                      console.log(fileMd);
                   else
                       console.log(err);
+
+                      let cad = fileMd;
+                      console.log(cad);
+                      let er1 = new RegExp ("http");
+                      let er2 = /http/;
+                      let rta = er1.test(cad);
+                      console.log(rta);
               });
       } 
+
+
       });
    });
   
-//   module.exports = search;
+//buscando http con expresion regular
+
+//const http = require('http');
+
+  
+
+
+
+// let http = /^http+a/;
+// //let dir = new RegExp(/^http/);
+// //let newString = "fi";
+// if  (fileMd.test(http)){
+//     console.log("");
+// }
+
 
 
 
