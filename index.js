@@ -1,20 +1,108 @@
-//module.exports = () => {};
-// const http = require('http');
+module.exports = () => {};
+  const fs = require('fs');
+  const path = require('path');
+  
+  
+  const search =
+  fs.readdir('./', (err, dataf) => {
+  if(err){
+      console.log("Error");
+  } else{
+      console.log(dataf);
+      dataf.forEach(element => {
+      if(path.extname(element) === ".md"){
+         let mdFile= element;
+         fs.readFile(`./${mdFile}`, 'utf8', (err,data) =>
+              {
+                  if(err)
+                      console.log(err)
+                  else
+                      console.log(data);
+              });
+      } else{
+          console.log("empty data")
+      }   
+      });
+  }
+  });
+  
+  module.exports = search;
+
+
 
 // accede al fichero para lectura y lo devuelve uen string
-const fs = require('fs');
-// acceder a sistema de ficheros para leer archivo md
-fs.readFile('README.md', 'utf-8', (err, data) => {
-  if (err) {
-    // console.log('error: ', err);
-  } else {
-    // console.log(data);
-  }
+
+// accede al fichero para lectura y lo devuelve uen string
+// const fs = require('fs');
+// const path = require('path');
+ 
+// fs.readdir('./(err,data');   {
+    
+//     if(path.extname() === ".md"){
+        
+//                  if(err)
+//                      console.log(err)
+//                  else
+//                      console.log(data);
+             
+//             };
+     
+//  };
+
+// const mdLinks = require("md-links");
 
 
-  const datamd = data;
-  console.log(datamd);
-});
+
+// // Ruta relativa con option (validate)
+// mdLinks("./some/example.md", { validate: true })
+//   .then(links => {
+//     // => [{ href, text, file, status, ok }]
+//   })
+//   .catch(console.error);
+
+
+//leer archivo linea por linea
+// const readline = require("readline");
+// const fs = require('fs');
+//     fileName = "README.md";
+
+// let lector = readline.createInterface({
+//     input: fs.createReadStream(fileName)
+// });
+
+// lector.on("line", line => {
+//     console.log("this is a line:", line);
+// });
+
+
+// function visible(a) {
+//     var R  =  ''
+//     for (var i = 0; i < a.length; i++) {
+//         if (a[i] == '\b') {  R -= 1; continue; }  
+//         if (a[i] == '\u001b') {
+//             while (a[i] != 'm' && i < a.length) i++
+//             if (a[i] == undefined) break
+//         }
+//         else R += a[i]
+//     }
+//     return  R
+// }
+
+// function empty(a) {
+//     a = visible(a)
+//     for (var i = 0; i < a.length; i++) {
+//         if (a[i] != ' ') return false
+//     }
+//     return  true
+// }
+
+// var readline = require('readline')
+// var rl = readline.createInterface({ input: process.stdin, output: process.stdout, terminal: false })
+
+// rl.on('line', function(line) {
+//     if (!empty(line)) console.log(line) 
+// })
+
 
   //aqui estoy contando no se que cosa 
 //   cuenta = 0;
