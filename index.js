@@ -2,31 +2,22 @@ module.exports = () => {};
   const fs = require('fs');
   const path = require('path');
   
-  
-  const search =
-  fs.readdir('./', (err, dataf) => {
-  if(err){
-      console.log("Error");
-  } else{
-      console.log(dataf);
-      dataf.forEach(element => {
-      if(path.extname(element) === ".md"){
-         let mdFile= element;
-         fs.readFile(`./${mdFile}`, 'utf8', (err,data) =>
+  fs.readdir('./', (err, data) => {
+      data.forEach(format => {
+      if(path.extname(format) === ".md"){
+         let mdFormat= format;
+         fs.readFile(`./${mdFormat}`, 'utf8', (err,fileMd) =>
               {
                   if(err)
                       console.log(err)
                   else
-                      console.log(data);
+                      console.log(fileMd);
               });
-      } else{
-          console.log("empty data")
-      }   
+      } 
       });
-  }
-  });
+   });
   
-  module.exports = search;
+//   module.exports = search;
 
 
 
