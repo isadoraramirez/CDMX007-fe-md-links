@@ -8,10 +8,10 @@ module.exports = () => {};
          let mdFormat= format;
          fs.readFile(`./${mdFormat}`, 'utf8', (err,fileMd) =>
               {
-                  if(err)
-                      console.log(err)
+                  if(fileMd)
+                      console.log(fileMd)
                   else
-                      console.log(fileMd);
+                      console.log(err);
               });
       } 
       });
