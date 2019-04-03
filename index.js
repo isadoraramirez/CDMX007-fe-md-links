@@ -14,11 +14,13 @@ module.exports = () => {};
                       console.log(err);
 
                       let cad = fileMd;
-                      console.log(cad);
-                      let er1 = new RegExp ("http");
-                      let er2 = /http/;
-                      let rta = er1.test(cad);
+                      //console.log(cad);
+                      //let er1 = new RegExp ("(https*)+");
+                      let er2 = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
+                      let rta = er2.test(cad);
                       console.log(rta);
+                      let arr = cad.match(er2);
+                      console.log(arr);
               });
       } 
 
