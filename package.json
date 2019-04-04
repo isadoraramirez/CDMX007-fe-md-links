@@ -30,5 +30,8 @@
   "devDependencies": {
     "jest": "^24.5.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "node-fetch": "^2.3.0",
+    "validate.js": "^0.12.0"
+  }
 }
