@@ -1,4 +1,37 @@
 {
   "name": "md-links",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "description": "## Preámbulo",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isadoraramirez/CDMX007-fe-md-links.git"
+  },
+  "keywords": [
+    "md",
+    "links",
+    "markdown",
+    "node.js",
+    "librería",
+    "library"
+  ],
+  "author": "Elizabeth Isadora Ramírez Ortíz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isadoraramirez/CDMX007-fe-md-links/issues"
+  },
+  "homepage": "https://github.com/isadoraramirez/CDMX007-fe-md-links#readme",
+  "devDependencies": {
+    "jest": "^24.5.0"
+  },
+  "dependencies": {
+    "node-fetch": "^2.3.0",
+    "validate.js": "^0.12.0"
+  }
 }
