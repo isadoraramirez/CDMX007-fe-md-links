@@ -2,6 +2,8 @@
 const fs = require('fs');
 const path = require('path');
 const searchURL = require('./linkmd');
+const validUrl = require('valid-url');
+
 const markdownPath = () => {
 
   fs.readdir('./', (err, data) => {

@@ -1,11 +1,11 @@
-const linksrs = require('./linkmd')
+const linkmd = require('./linkmd')
     const validUrl = require('valid-url');
 
-    const markdownSearchLinks = (data)
-  console.log('hola');
+    const markdownSearchLinks = (result)
+  
 
-//     if (process.argv.includes('--validate')) options.validate = true;
-//     if (process.argv.includes('--stats')) options.stats = true;
+    if (process.argv.includes('--validate')) options.validate = true;
+    if (process.argv.includes('--stats')) options.stats = true;
     
 //     let accion = [] // Init Array 
 //     process.argv.forEach(function (val, index, array) { // Get actions terminar line
@@ -13,16 +13,16 @@ const linksrs = require('./linkmd')
 //       //console.log(index)
 //     });
 
-//     if(validate == '--validate'){
+    if(validate == '--validate'){
 
-//     if (validUrl.isUri(files)){
-//         console.log('Looks like an URI');
-//     } else {
-//         console.log('Not a URI');
-//     }
+    if (validUrl.isUri(markdownSearchLinks)){
+        console.log('Looks like an URI');
+    } else {
+        console.log('Not a URI');
+    }
 
 
-// }
+}
 
 
 
