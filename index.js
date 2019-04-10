@@ -2,9 +2,10 @@
 const fs = require('fs');
 const path = require('path');
 const searchURL = require('./linkmd');
-const validUrl = require('valid-url');
+const resLink = require('./validate');
 
-const markdownPath = () => {
+
+const mdextract = () => {
 
   fs.readdir('./', (err, data) => {
     if (err) {
@@ -17,9 +18,9 @@ const markdownPath = () => {
           fs.readFile(element, 'utf-8', (err, data) => {
             {
               if (err)
-                console.log('ERROR', err);
+                console.log('error', err);
               else
-                searchURL.markdownSearchLinks(data)
+                searchURL.mdLink(data)
             }
           })
         }
@@ -27,8 +28,8 @@ const markdownPath = () => {
     }
   })
 }
-markdownPath()
-module.exports = markdownPath;
+mdextract()
+module.exports.mdextract = mdextract;
 
 
                   

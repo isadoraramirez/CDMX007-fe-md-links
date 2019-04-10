@@ -1,14 +1,14 @@
  
-const markdownSearchLinks = (data) => {
+const mdLink = (data) => {
 
-  const regex = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
-  const result = data.match(regex);
+  const reex = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+  const resLink = data.match(reex);
 
  
-  console.log(result);
+  console.log(resLink);
 
-  let totalLinks = result.length;
-  console.log("links:"+totalLinks);
+  let score = resLink.length;
+  console.log("links:"+score);
 
 
 
@@ -17,5 +17,4 @@ const markdownSearchLinks = (data) => {
 
 
 
-
-module.exports.markdownSearchLinks = markdownSearchLinks;
+module.exports.mdLink = mdLink;

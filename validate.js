@@ -1,29 +1,30 @@
-const linkmd = require('./linkmd')
-    const validUrl = require('valid-url');
 
-    const markdownSearchLinks = (result)
-  
+  const validUrl = require('valid-url');
+const validate= (resLink) => {
 
-    if (process.argv.includes('--validate')) options.validate = true;
-    if (process.argv.includes('--stats')) options.stats = true;
+
+  if (validUrl.isUri(resLink)){
+            console.log('Looks like an URI');
+        } else {
+            console.log('Not a URI');
+        }
+
+  // const fetch = require('node-fetch');
     
-//     let accion = [] // Init Array 
-//     process.argv.forEach(function (val, index, array) { // Get actions terminar line
-//       accion.push(val); // order array command line User
-//       //console.log(index)
-//     });
+  //   resLink.forEach(element => {
+  //         fetch(element)
+  //           .then(response => {
+  //             if (response.status == 200) {
+  //               console.log(`${element}` + " " + response.status + " " + response.statusText);
+  //             } else if (response.status == 404) {
+  //               console.log(`${element}` + " " + response.status + " " + response.statusText);
+  //             }
+  //           })
+  //           .catch(err => console.log(err));
+  //       })
+      
+       }
 
-    if(validate == '--validate'){
-
-    if (validUrl.isUri(markdownSearchLinks)){
-        console.log('Looks like an URI');
-    } else {
-        console.log('Not a URI');
-    }
-
-
-}
-
+module.exports.validate = validate;
 
 
-module.exports.validUrl= validUrl;
