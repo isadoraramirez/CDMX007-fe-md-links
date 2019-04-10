@@ -31,7 +31,9 @@
     "jest": "^24.5.0"
   },
   "dependencies": {
+    "markdown-link-extractor": "^1.2.0",
     "node-fetch": "^2.3.0",
+    "ultra-markdown-md-links": "^1.0.3",
     "validate.js": "^0.12.0"
   }
 }
