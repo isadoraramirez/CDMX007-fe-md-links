@@ -1,5 +1,5 @@
 {
-  "name": "md-links",
+  "name": "md-links-ely",
   "version": "0.1.0",
   "description": "## Preámbulo",
   "main": "index.js",
@@ -31,6 +31,7 @@
     "jest": "^24.5.0"
   },
   "dependencies": {
+    "http-status-codes": "^1.3.2",
     "markdown-link-extractor": "^1.2.0",
     "node-fetch": "^2.3.0",
     "ultra-markdown-md-links": "^1.0.3",

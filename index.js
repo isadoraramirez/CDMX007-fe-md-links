@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const searchURL = require('./linkmd');
-const resLink = require('./validate');
+const validation = require('./validate');
 
 
 const mdextract = () => {
