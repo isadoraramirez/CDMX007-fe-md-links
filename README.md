@@ -1,3 +1,44 @@
+
+# Markdown Links
+
+## Introducción.
+
+La siguiente librería, aun en construcción, pretende ser una solución a la necesidad
+del ususario de archivos markdown quienes suelen añadir enlaces o links de paginas en 
+estos archivos, ante la problematica de que algunos links puedan estar rotos y esto 
+sea dificil de detectar por la cantidad de links que existan.
+
+En concreto la libreria debe desempeñar en principio la busqueda de algun archivo .md en el 
+proyecto donde sea instalada, despues se buscaran los links a paginas web en este archivo terminación .md, posteriormente detectara los links validos y los rotos y por ultimo nos dara el conteo de cuantos links estan rotos y cuantos son validos.
+
+
+## Desarrollo
+
+Para el desarrollo de esta librería se recurrio a bosquejar un diagrama de flujo para 
+visualizar la posible solución.
+
+
+ ![screen](./images/diagrama.jpg) 
+
+## Documentación técnica
+
+Esta librería se realizo en nodejs.
+Incluye el uso de estas 4 dependencias: 
+- markdown-link-extractor
+- node-fetch
+- ultra-markdown-md-links
+- validate.js
+
+## Guía de uso
+
+Para poder instalar esta dependencia en la terminal se debe colocarse en la carpeta del proyecto que se quiere analizar con el md links y escribir el siguiente comando:
+npm i md-links-ely  y dar enter.
+
+Para correr la libreria, en la terminal teclea node intex.js y dar enter
+
+
+
+
 # Markdown Links
 
 ## Preámbulo
@@ -342,20 +383,20 @@ si tienes dudas existenciales con respecto a estas decisiones. No existe una
 
 ### General
 
-- [ ] Puede instalarse via `npm install --global <github-user>/md-links`
+- [x] Puede instalarse via `npm install --global <github-user>/md-links`
 
 ### `README.md`
 
-- [ ] Colocar el pseudo código o diagrama de flujo con el algoritmo que soluciona el problema.
-- [ ] Un board con el backlog para la implementación de la librería.
-- [ ] Documentación técnica de la librería.
-- [ ] Guía de uso e instalación de la librería
+- [x] Colocar el pseudo código o diagrama de flujo con el algoritmo que soluciona el problema.
+- [x] Un board con el backlog para la implementación de la librería.
+- [x] Documentación técnica de la librería.
+- [x] Guía de uso e instalación de la librería
 
 ### API `mdLinks(path, opts)`
 
-- [ ] El módulo exporta una función con la interfaz (API) esperada.
+- [x] El módulo exporta una función con la interfaz (API) esperada.
 - [ ] Implementa soporte para archivo individual
-- [ ] Implementa soporte para directorios
+- [x] Implementa soporte para directorios
 - [ ] Implementa `options.validate`
 
 ### Pruebas / tests
