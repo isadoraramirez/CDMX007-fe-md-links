@@ -7,17 +7,17 @@ const mdLink = (data) => {
  const resLink = resLinkone
   
   const fetch = require('node-fetch');
-  const path = require('path');
+  
   
 
-  if (resLink !== null) {
-    resLink.forEach(element => {
-      fetch(element).then(res => {
-        const linkStatus = res.status
+  if (resLink !== 0) {
+    resLink.forEach(link => {
+      fetch(link).then(ans => {
+        const linkStatus = ans.status
         if (linkStatus === 200) {
-          console.log(element,linkStatus,'valido')  
+          console.log(link,linkStatus,'valido')  
         } else{
-          console.log(element,linkStatus,'invalido')
+          console.log(link,linkStatus,'invalido')
           
         }
       })
