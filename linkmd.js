@@ -2,41 +2,34 @@
 const mdLink = (data) => {
 
   const reex = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
-  const resLinko = data.match(reex);
+  const resLinkone = data.match(reex);
 
- const resLink = resLinko
-  //console.log(resLink);
-
-  const validUrl = require('valid-url');
- 
+ const resLink = resLinkone
   
-    resLink.forEach(resLink => {  
-       
-      if (validUrl.isUri(resLink)){
-        console.log('Link valido'+resLink);
-    } else {
-        console.log('No es un link valido'+resLink);
-    } 
-  })  
+  const fetch = require('node-fetch');
+  const path = require('path');
+  
+
+  if (resLink !== null) {
+    resLink.forEach(element => {
+      fetch(element).then(res => {
+        const linkStatus = res.status
+        if (linkStatus === 200) {
+          console.log(element,linkStatus,'valido')  
+        } else{
+          console.log(element,linkStatus,'invalido')
+          
+        }
+      })
+    })
   }
-  // const validUrl = require('valid-url');
-  // if (validUrl.isUri(data)){
-  //           console.log('Link valido');
-  //       } else {
-  //           console.log('No es un link valido');
-  //       }
-      
-    
-  
-  //let score = resLink.length;
-  //console.log("links:"+score);
-
-
-
-  
 
 
 
 
 
+
+
+}
+ 
 module.exports.mdLink = mdLink;
