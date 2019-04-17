@@ -43,12 +43,6 @@ const validate = require ('./linkmd')
 //  }
 
 
-  // if (validUrl.isUri(nearr)){
-  //           console.log('Link valido');
-  //       } else {
-  //           console.log('No es un link valido');
-  //       }
-
 
 
 // validate(mdLink)
